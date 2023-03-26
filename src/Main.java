@@ -6,5 +6,10 @@ public class Main {
         System.out.println(card_1.getQuestion());
         System.out.println(card_1.getAnswer());
         System.out.println(card_1.getCategory());
+
+        Turn turn_1 = new Turn("Juneau", card_1);
+
+        System.out.println(turn_1.getGuess());
+        System.out.println(turn_1.getCard());
     }
 }
