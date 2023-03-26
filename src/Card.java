@@ -23,4 +23,4 @@ public class Card {
             return this.category;
         }
     }
-}
+
