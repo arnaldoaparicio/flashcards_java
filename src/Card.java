@@ -22,5 +22,5 @@ public class Card {
         public String getCategory() {
             return this.category;
         }
-    }
+}
 
