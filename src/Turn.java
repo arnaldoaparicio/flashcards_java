@@ -22,4 +22,12 @@ public class Turn {
             return false;
         }
     }
+
+    public String guessFeedback() {
+        if(isCorrectGuess() == true) {
+            return "Correct!";
+        } else {
+            return "Incorrect";
+        }
+    }
 }
