@@ -7,6 +7,7 @@ public class Turn {
         this.guess = guess;
         this.card = card;
     }
+
     public String getGuess() {
         return this.guess;
     }
@@ -24,7 +25,7 @@ public class Turn {
     }
 
     public String guessFeedback() {
-        if(isCorrectGuess() == true) {
+        if (isCorrectGuess() == true) {
             return "Correct!";
         } else {
             return "Incorrect";
