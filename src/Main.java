@@ -15,5 +15,7 @@ public class Main {
         System.out.println(turn_1.getCard().getQuestion());
 
         System.out.println(turn_1.isCorrectGuess());
+
+        System.out.println(turn_1.guessFeedback());
     }
 }
