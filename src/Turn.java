@@ -7,11 +7,19 @@ public class Turn {
         this.guess = guess;
         this.card = card;
     }
-        public String getGuess() {
-            return this.guess;
-        }
+    public String getGuess() {
+        return this.guess;
+    }
 
-        public Card getCard() {
-            return this.card;
+    public Card getCard() {
+        return this.card;
+    }
+
+    public boolean isCorrectGuess() {
+        if (guess == card.getAnswer()) {
+            return true;
+        } else {
+            return false;
         }
     }
+}
