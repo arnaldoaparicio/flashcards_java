@@ -9,9 +9,9 @@ public class Deck {
     }
 
     public String getCards() {
-//        this.cards.forEach(card -> {
-//            System.out.printf("%s question= %s , answer= %s , category= %s", card.toString(), card.getQuestion(), card.getAnswer(), card.getCategory());
-//        });
+        this.cards.forEach(card -> {
+            System.out.printf("%s question= %s , answer= %s , category= %s ", card.toString(), card.getQuestion(), card.getAnswer(), card.getCategory());
+        });
         return this.cards.toString();
     }
 
