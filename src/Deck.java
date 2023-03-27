@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.stream.*;
 
 public class Deck {
     private ArrayList<Card> cards = new ArrayList<Card>();
@@ -17,4 +18,9 @@ public class Deck {
     public Integer cardCount() {
         return this.cards.size();
     }
+
+    public String cardsInCategory(String category) {
+        return cards.stream().filter(card -> card.getCategory() == category).collect(Collectors.toList()).toString();
+    }
+
 }
