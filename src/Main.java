@@ -13,9 +13,9 @@ public class Main {
 
         Deck deck = new Deck(cards);
 
-        System.out.println(card_1.getQuestion());
-        System.out.println(card_1.getAnswer());
-        System.out.println(card_1.getCategory());
+//        System.out.println(card_1.getQuestion());
+//        System.out.println(card_1.getAnswer());
+//        System.out.println(card_1.getCategory());
 
         Turn turn_1 = new Turn("Juneau", card_1);
 
@@ -31,5 +31,6 @@ public class Main {
         System.out.println(deck.cardCount());
 
         System.out.println(deck.cardsInCategory("Geography"));
+
     }
 }
