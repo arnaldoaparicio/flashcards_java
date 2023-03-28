@@ -19,18 +19,24 @@ public class Main {
 
         Turn turn_1 = new Turn("Juneau", card_1);
 
-        System.out.println(turn_1.getGuess());
-        System.out.println(turn_1.getCard());
+        Round round_1 = new Round(deck);
 
-        System.out.println(turn_1.getCard().getQuestion());
-
-        System.out.println(turn_1.isCorrectGuess());
-
-        System.out.println(turn_1.guessFeedback());
-        System.out.println(deck.getCards());
-        System.out.println(deck.cardCount());
+//        System.out.println(turn_1.getGuess());
+//        System.out.println(turn_1.getCard());
+//
+//        System.out.println(turn_1.getCard().getQuestion());
+//
+//        System.out.println(turn_1.isCorrectGuess());
+//
+//        System.out.println(turn_1.guessFeedback());
+//        System.out.println(deck.getCards());
+//        System.out.println(deck.cardCount());
 
         System.out.println(deck.cardsInCategory("Geography"));
+
+        System.out.println(round_1.getDeck());
+        System.out.println(round_1.getTurnsTaken());
+        System.out.println(round_1.currentCard());
 
     }
 }
