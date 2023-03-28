@@ -8,6 +8,10 @@ public class Deck {
         this.cards = cards;
     }
 
+    public ArrayList allCards() {
+        return this.cards;
+    }
+
     public String getCards() {
         this.cards.forEach(card -> {
             System.out.printf("%s question= %s , answer= %s , category= %s ", card.toString(), card.getQuestion(), card.getAnswer(), card.getCategory());
