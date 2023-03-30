@@ -17,6 +17,6 @@ public class Round {
     }
 
     public String currentCard() {
-        return deck.allCards().get(0).toString();
+        return deck.formattedAllCards().get(0).toString();
     }
 }
