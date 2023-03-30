@@ -29,7 +29,7 @@ public class Main {
 //        System.out.println(turn_1.isCorrectGuess());
 //
 //        System.out.println(turn_1.guessFeedback());
-//        System.out.println(deck.getCards());
+       System.out.println(deck.getCards());
 //        System.out.println(deck.cardCount());
 
         System.out.println(deck.cardsInCategory("Geography"));
