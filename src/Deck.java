@@ -12,6 +12,16 @@ public class Deck {
         return this.cards;
     }
 
+    public ArrayList formattedAllCards() {
+        ArrayList<String> cardAndDetails = new ArrayList<String>();
+
+        this.cards.forEach(card -> {
+            cardAndDetails.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(),
+                    card.getQuestion(), card.getAnswer(), card.getCategory()));
+        });
+        return cardAndDetails;
+    }
+
     public String getCards() {
         ArrayList<String> cardAndDetails = new ArrayList<String>();
 
@@ -28,5 +38,4 @@ public class Deck {
     public String cardsInCategory(String category) {
         return cards.stream().filter(card -> card.getCategory() == category).collect(Collectors.toList()).toString();
     }
-
 }
