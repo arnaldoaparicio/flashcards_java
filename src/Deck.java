@@ -47,4 +47,8 @@ public class Deck {
         });
         return newCategoryCards.toString();
     }
+
+    public Card firstCard() {
+        return this.cards.get(0);
+    }
 }
