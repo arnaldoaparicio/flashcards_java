@@ -38,10 +38,11 @@ public class Main {
         // System.out.println(round_1.getTurnsTaken());
         System.out.println(round_1.currentCard());
         System.out.println(round_1.turnsCount());
-        round_1.takeTurn("Juneau");
+        round_1.takeTurn(turn_1.getGuess());
         System.out.println(round_1.getTurnsTaken());
         System.out.println(deck.formattedAllCards());
         System.out.println(round_1.currentCard());
+        System.out.println(round_1.latestCardFeedback());
 
     }
 }
