@@ -36,13 +36,14 @@ public class Main {
 
         // System.out.println(round_1.getDeck());
         // System.out.println(round_1.getTurnsTaken());
-        System.out.println(round_1.currentCard());
-        System.out.println(round_1.turnsCount());
+        System.out.println("Current card: " + round_1.currentCard());
+        System.out.println("Number of turns: " + round_1.turnsCount());
         round_1.takeTurn(turn_1.getGuess());
-        System.out.println(round_1.getTurnsTaken());
-        System.out.println(deck.formattedAllCards());
-        System.out.println(round_1.currentCard());
-        System.out.println(round_1.latestCardFeedback());
+        System.out.println("All turns taken: " + round_1.getTurnsTaken());
+        System.out.println("All cards: " + deck.formattedAllCards());
+        System.out.println("Current card: " + round_1.currentCard());
+        System.out.println("Number of turns: " + round_1.turnsCount());
+        System.out.println("Latest card feedback: " + round_1.latestCardFeedback());
 
     }
 }
