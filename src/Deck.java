@@ -9,11 +9,11 @@ public class Deck {
         this.cards = cards;
     }
 
-    public ArrayList allCards() {
+    public ArrayList<Card> allCards() {
         return this.cards;
     }
 
-    public ArrayList formattedAllCards() {
+    public ArrayList<String> formattedAllCards() {
         ArrayList<String> cardAndDetails = new ArrayList<String>();
 
         this.cards.forEach(card -> {
