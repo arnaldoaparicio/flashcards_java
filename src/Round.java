@@ -20,6 +20,10 @@ public class Round {
         return deck.formattedAllCards().get(0).toString();
     }
 
+    public Integer turnsCount() {
+        return this.turnsTaken.size();
+    }
+
     // public void takeTurn(String guess) {
 
     //     Turn turn = new Turn(guess, deck.allCards().get(0).cast(Card));
