@@ -24,11 +24,9 @@ public class Round {
         return this.turnsTaken.size();
     }
 
-    public String takeTurn(String guess) {
-        ArrayList<Card> firstValue = new ArrayList<Card>();
+    public void takeTurn(String guess) {
         Turn turn = new Turn(guess, deck.firstCard());
         turnsTaken.add(turn);
         deck.allCards().remove(0);
-        return turnsTaken.toString();
     }
 }
