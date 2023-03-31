@@ -28,7 +28,7 @@ public class Turn {
         if (isCorrectGuess() == true) {
             return "Correct!";
         } else {
-            return "Incorrect";
+            return "Incorrect!";
         }
     }
 }
