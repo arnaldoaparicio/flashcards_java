@@ -27,7 +27,8 @@ public class Deck {
         ArrayList<String> cardAndDetails = new ArrayList<String>();
 
         this.cards.forEach(card -> {
-            cardAndDetails.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(), card.getQuestion(), card.getAnswer(), card.getCategory()));
+            cardAndDetails.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(),
+                    card.getQuestion(), card.getAnswer(), card.getCategory()));
         });
         return cardAndDetails.toString();
     }
@@ -43,7 +44,8 @@ public class Deck {
         categoryCards = cards.stream().filter(card -> card.getCategory() == category).collect(Collectors.toList());
 
         categoryCards.forEach(card -> {
-            newCategoryCards.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(), card.getQuestion(), card.getAnswer(), card.getCategory()));
+            newCategoryCards.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(),
+                    card.getQuestion(), card.getAnswer(), card.getCategory()));
         });
         return newCategoryCards.toString();
     }
