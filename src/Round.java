@@ -48,7 +48,9 @@ public class Round {
         return correctTurns.size();
     }
 
-    public Integer percentCorrect() {
-        return numberCorrect() / turnsTaken.size();
+    public Float percentCorrect() {
+        int percent = numberCorrect() / turnsTaken.size();
+        float percentFloat = (float) percent;
+        return percentFloat * 100;
     }
 }
