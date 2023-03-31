@@ -14,7 +14,7 @@ public class Round {
     
     public String getTurnsTaken() {
         ArrayList<String> formattedTurnsTaken = new ArrayList<String>();
-        
+
         turnsTaken.forEach(turn -> {
             formattedTurnsTaken.add(String.format("%s %s question= %s, answer= %s, category= %s", 
             turn.toString(), turn.getCard(), turn.getCard().getQuestion(), turn.getCard().getAnswer(), turn.getCard().getCategory()));
@@ -34,5 +34,9 @@ public class Round {
         Turn turn = new Turn(guess, deck.firstCard());
         turnsTaken.add(turn);
         deck.allCards().remove(0);
+    }
+
+    public String latestCardFeedback() {
+        return turnsTaken.get(turnsTaken.size()-1).guessFeedback();
     }
 }
