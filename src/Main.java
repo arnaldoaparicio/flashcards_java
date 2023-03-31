@@ -46,6 +46,7 @@ public class Main {
         System.out.println("Number of turns: " + round_1.turnsCount());
         System.out.println("Latest card feedback: " + round_1.latestCardFeedback());
         System.out.println("Number correct: " + round_1.numberCorrect());
+        System.out.println("Percent correct: " + round_1.percentCorrect());
 
     }
 }
