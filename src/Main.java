@@ -48,6 +48,7 @@ public class Main {
         System.out.println("Number correct: " + round_1.numberCorrect());
         System.out.println("Percent correct: " + round_1.percentCorrect());
         System.out.println("Number correct by category: " + round_1.numberCorrectByCategory("Geography"));
+        System.out.println("Percent correct by category: " + round_1.percentCorrectByCategory("Geography"));
 
     }
 }
