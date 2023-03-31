@@ -36,6 +36,7 @@ public class Main {
 
         // System.out.println(round_1.getDeck());
         System.out.println(round_1.getTurnsTaken());
+        System.out.println(round_1.turnsCount());
         // System.out.println(round_1.currentCard());
 
     }
