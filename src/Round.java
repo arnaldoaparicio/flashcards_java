@@ -47,4 +47,8 @@ public class Round {
         correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!").collect(Collectors.toList());
         return correctTurns.size();
     }
+
+    public Integer percentCorrect() {
+        return numberCorrect() / turnsTaken.size();
+    }
 }
