@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.stream.*;
+import java.util.List;
 public class Round {
 
     private Deck deck;
@@ -38,5 +40,11 @@ public class Round {
 
     public String latestCardFeedback() {
         return turnsTaken.get(turnsTaken.size()-1).guessFeedback();
+    }
+
+    public Integer numberCorrect() {
+        List<Turn> correctTurns = new ArrayList<Turn>();
+        correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!").collect(Collectors.toList());
+        return correctTurns.size();
     }
 }
