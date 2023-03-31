@@ -68,4 +68,24 @@ public class Round {
         }
         return categoryCorrect.size();
     }
+
+    public Float percentCorrectByCategory(String category) {
+        List<Turn> correctTurns = new ArrayList<Turn>();
+        List<Turn> categoryCorrect = new ArrayList<Turn>();
+
+        correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!")
+                .collect(Collectors.toList());
+
+        for (int index = 0; index < correctTurns.size(); index++) {
+            if (correctTurns.get(index).getCard().getCategory() == category) {
+                categoryCorrect.add(correctTurns.get(index));
+            }
+        }
+
+        float correctTurnsFloat = (float) correctTurns.size();
+        float categoryCorrectFloat = (float) categoryCorrect.size();
+
+        return (categoryCorrectFloat / correctTurnsFloat) * 100;
+
+    }
 }
