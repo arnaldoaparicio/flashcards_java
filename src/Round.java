@@ -53,4 +53,19 @@ public class Round {
         float percentFloat = (float) percent;
         return percentFloat * 100;
     }
+
+    public Integer numberCorrectByCategory(String category) {
+        List<Turn> correctTurns = new ArrayList<Turn>();
+        List<Turn> categoryCorrect = new ArrayList<Turn>();
+
+        correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!")
+                .collect(Collectors.toList());
+        
+        for(int index = 0; index < correctTurns.size(); index++) {
+            if (correctTurns.get(index).getCard().getCategory() == category) {
+                categoryCorrect.add(correctTurns.get(index));
+            }
+        }
+        return categoryCorrect.size();
+    }
 }
