@@ -19,4 +19,10 @@ public class Round {
     public String currentCard() {
         return deck.formattedAllCards().get(0).toString();
     }
+
+    // public void takeTurn(String guess) {
+
+    //     Turn turn = new Turn(guess, deck.allCards().get(0).cast(Card));
+    //     turnsTaken.add(turn);
+    // }
 }
