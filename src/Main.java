@@ -39,8 +39,8 @@ public class Main {
         System.out.println(round_1.turnsCount());
         round_1.takeTurn("Juneau");
         System.out.println(round_1.getTurnsTaken());
-        System.out.println(deck.allCards());
-        // System.out.println(round_1.currentCard());
+        System.out.println(deck.formattedAllCards());
+        // System.out.println(round_1.curentCard());
 
     }
 }
