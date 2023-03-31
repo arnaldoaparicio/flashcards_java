@@ -2,6 +2,14 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
+        Card card_1 = new Card("What is 5 + 5?", "10", "STEM");
+        Card card_2 = new Card("What is Mike's middle name?", "nobody knows", "Turing Staff");
+        Card card_3 = new Card("What is Rachel's favorite animal?", "panda", "Turing Staff");
+        Card card_4 = new Card("What cardboard cutout lives at Turing?", "Justin Bieber", "Pop Culture");
+
+        
+
+
         // Card card_1 = new Card("What is the capital of Alaska?", "Juneau", "Geography");
         // Card card_2 = new Card("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", "STEM");
         // Card card_3 = new Card("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", "STEM");
