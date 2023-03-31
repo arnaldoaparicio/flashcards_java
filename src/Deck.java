@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.*;
 
 public class Deck {
@@ -36,6 +37,14 @@ public class Deck {
     }
 
     public String cardsInCategory(String category) {
-        return cards.stream().filter(card -> card.getCategory() == category).collect(Collectors.toList()).toString();
+        List<Card> categoryCards = new ArrayList<Card>();
+        List<String> newCategoryCards = new ArrayList<String>();
+
+        categoryCards = cards.stream().filter(card -> card.getCategory() == category).collect(Collectors.toList());
+
+        categoryCards.forEach(card -> {
+            newCategoryCards.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(), card.getQuestion(), card.getAnswer(), card.getCategory()));
+        });
+        return newCategoryCards.toString();
     }
 }
