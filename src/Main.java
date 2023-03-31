@@ -32,15 +32,16 @@ public class Main {
     //    System.out.println(deck.getCards());
 //        System.out.println(deck.cardCount());
 
-        System.out.println(deck.cardsInCategory("Geography"));
+        // System.out.println(deck.cardsInCategory("Geography"));
 
         // System.out.println(round_1.getDeck());
-        System.out.println(round_1.getTurnsTaken());
+        // System.out.println(round_1.getTurnsTaken());
+        System.out.println(round_1.currentCard());
         System.out.println(round_1.turnsCount());
         round_1.takeTurn("Juneau");
         System.out.println(round_1.getTurnsTaken());
         System.out.println(deck.formattedAllCards());
-        // System.out.println(round_1.curentCard());
+        System.out.println(round_1.currentCard());
 
     }
 }
