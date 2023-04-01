@@ -96,8 +96,4 @@ public class Round {
     public Deck getLiteralDeck() {
         return this.deck;
     }
-
-    public ArrayList<Turn> allTurnsTaken() {
-        return this.turnsTaken;
-    }
 }
