@@ -28,6 +28,10 @@ public class Round {
         return deck.formattedAllCards().get(0).toString();
     }
 
+    public Card card() {
+        return deck.firstCard();
+    }
+
     public Integer turnsCount() {
         return this.turnsTaken.size();
     }
@@ -39,7 +43,7 @@ public class Round {
     }
 
     public String latestCardFeedback() {
-        return turnsTaken.get(turnsTaken.size()-1).guessFeedback();
+        return turnsTaken.get(turnsTaken.size() - 1).guessFeedback();
     }
 
     public Integer numberCorrect() {
@@ -87,5 +91,13 @@ public class Round {
 
         return (categoryCorrectFloat / correctTurnsFloat) * 100;
 
+    }
+
+    public Deck getLiteralDeck() {
+        return this.deck;
+    }
+
+    public ArrayList<Turn> allTurnsTaken() {
+        return this.turnsTaken;
     }
 }
