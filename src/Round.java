@@ -60,35 +60,29 @@ public class Round {
 
     public Integer numberCorrectByCategory(String category) {
         List<Turn> correctTurns = new ArrayList<Turn>();
-        List<Turn> categoryCorrect = new ArrayList<Turn>();
 
-        correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!")
+        correctTurns = turnsTaken.stream().filter(turn -> turn.getCard().getCategory().equals(category) 
+        && turn.guessFeedback().equals("Correct!"))
                 .collect(Collectors.toList());
-        
-        for(int index = 0; index < correctTurns.size(); index++) {
-            if (correctTurns.get(index).getCard().getCategory() == category) {
-                categoryCorrect.add(correctTurns.get(index));
-            }
-        }
-        return categoryCorrect.size();
+        return correctTurns.size();
     }
 
     public Float percentCorrectByCategory(String category) {
-        List<Turn> correctTurns = new ArrayList<Turn>();
-        List<Turn> categoryCorrect = new ArrayList<Turn>();
+        List<Turn> correctCategory = new ArrayList<Turn>();
+        List<Turn> entireCategory = new ArrayList<Turn>();
 
-        correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!")
+        entireCategory = turnsTaken.stream().filter(turn -> turn.getCard().getCategory().equals(category))
                 .collect(Collectors.toList());
 
-        for (int index = 0; index < correctTurns.size(); index++) {
-            if (correctTurns.get(index).getCard().getCategory() == category) {
-                categoryCorrect.add(correctTurns.get(index));
+        for (int index = 0; index < entireCategory.size(); index++) {
+            if (entireCategory.get(index).guessFeedback().equals("Correct!")) {
+                correctCategory.add(entireCategory.get(index));
             }
         }
 
-        float correctTurnsFloat = (float) correctTurns.size();
-        float categoryCorrectFloat = (float) categoryCorrect.size();
+        float correctCategoryFloat = (float) correctCategory.size();
+        float entireCategoryFloat = (float) entireCategory.size();
 
-        return (categoryCorrectFloat / correctTurnsFloat) * 100;
+        return (correctCategoryFloat / entireCategoryFloat) * 100;
     }   
 }
