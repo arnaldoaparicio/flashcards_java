@@ -90,10 +90,5 @@ public class Round {
         float categoryCorrectFloat = (float) categoryCorrect.size();
 
         return (categoryCorrectFloat / correctTurnsFloat) * 100;
-
-    }
-
-    public Deck getLiteralDeck() {
-        return this.deck;
-    }
+    }   
 }
