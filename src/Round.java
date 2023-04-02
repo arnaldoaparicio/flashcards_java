@@ -48,7 +48,9 @@ public class Round {
 
     public Integer numberCorrect() {
         List<Turn> correctTurns = new ArrayList<Turn>();
-        correctTurns = turnsTaken.stream().filter(turn -> turn.guessFeedback() == "Correct!").collect(Collectors.toList());
+        correctTurns = turnsTaken.stream()
+                                 .filter(turn -> turn.guessFeedback() == "Correct!")
+                                 .collect(Collectors.toList());
         return correctTurns.size();
     }
 
@@ -61,9 +63,11 @@ public class Round {
     public Integer numberCorrectByCategory(String category) {
         List<Turn> correctTurns = new ArrayList<Turn>();
 
-        correctTurns = turnsTaken.stream().filter(turn -> turn.getCard().getCategory().equals(category) 
-        && turn.guessFeedback().equals("Correct!"))
-                .collect(Collectors.toList());
+        correctTurns = turnsTaken.stream()
+                                 .filter(turn -> turn.getCard().getCategory()
+                                 .equals(category) && turn.guessFeedback()
+                                 .equals("Correct!"))
+                                 .collect(Collectors.toList());
         return correctTurns.size();
     }
 
@@ -71,8 +75,10 @@ public class Round {
         List<Turn> correctCategory = new ArrayList<Turn>();
         List<Turn> entireCategory = new ArrayList<Turn>();
 
-        entireCategory = turnsTaken.stream().filter(turn -> turn.getCard().getCategory().equals(category))
-                .collect(Collectors.toList());
+        entireCategory = turnsTaken.stream()
+                                   .filter(turn -> turn.getCard().getCategory()
+                                   .equals(category))
+                                   .collect(Collectors.toList());
 
         for (int index = 0; index < entireCategory.size(); index++) {
             if (entireCategory.get(index).guessFeedback().equals("Correct!")) {
