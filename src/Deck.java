@@ -41,7 +41,9 @@ public class Deck {
         List<Card> categoryCards = new ArrayList<Card>();
         List<String> newCategoryCards = new ArrayList<String>();
 
-        categoryCards = cards.stream().filter(card -> card.getCategory() == category).collect(Collectors.toList());
+        categoryCards = cards.stream()
+                             .filter(card -> card.getCategory() == category)
+                             .collect(Collectors.toList());
 
         categoryCards.forEach(card -> {
             newCategoryCards.add(String.format("%s question= %s, answer= %s, category= %s", card.toString(),
