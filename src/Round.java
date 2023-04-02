@@ -64,9 +64,7 @@ public class Round {
         List<Turn> correctTurns = new ArrayList<Turn>();
 
         correctTurns = turnsTaken.stream()
-                                 .filter(turn -> turn.getCard().getCategory()
-                                 .equals(category) && turn.guessFeedback()
-                                 .equals("Correct!"))
+                                 .filter(turn -> turn.getCard().getCategory().equals(category) && turn.guessFeedback().equals("Correct!"))
                                  .collect(Collectors.toList());
         return correctTurns.size();
     }
@@ -76,8 +74,7 @@ public class Round {
         List<Turn> entireCategory = new ArrayList<Turn>();
 
         entireCategory = turnsTaken.stream()
-                                   .filter(turn -> turn.getCard().getCategory()
-                                   .equals(category))
+                                   .filter(turn -> turn.getCard().getCategory().equals(category))
                                    .collect(Collectors.toList());
 
         for (int index = 0; index < entireCategory.size(); index++) {
