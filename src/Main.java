@@ -36,10 +36,10 @@ public class Main {
         
         System.out.println("****** Game Over! ******");
         System.out.println("You have " + round.numberCorrect() + " out of " + round.turnsCount());
-        System.out.println("STEM - " + round.percentCorrectByCategory("STEM") + " correct " + "(" + round.numberCorrectByCategory("STEM") + " correct)");
-        System.out.println("Turing Staff - " + round.percentCorrectByCategory("Turing Staff") + " correct " + "("
+        System.out.println("STEM - " + round.percentCorrectByCategory("STEM") + "% correct " + "(" + round.numberCorrectByCategory("STEM") + " correct)");
+        System.out.println("Turing Staff - " + round.percentCorrectByCategory("Turing Staff") + "% correct " + "("
                 + round.numberCorrectByCategory("Turing Staff") + " correct)");
-        System.out.println("Pop Culture - " + round.percentCorrectByCategory("Pop Culture") + " correct " + "("
+        System.out.println("Pop Culture - " + round.percentCorrectByCategory("Pop Culture") + "% correct " + "("
                 + round.numberCorrectByCategory("Pop Culture") + " correct)");
         
         scanner.close();
