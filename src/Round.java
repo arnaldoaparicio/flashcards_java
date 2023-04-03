@@ -69,7 +69,7 @@ public class Round {
         return correctTurns.size();
     }
 
-    public Float percentCorrectByCategory(String category) {
+    public Integer percentCorrectByCategory(String category) {
         List<Turn> correctCategory = new ArrayList<Turn>();
         List<Turn> entireCategory = new ArrayList<Turn>();
 
@@ -86,6 +86,9 @@ public class Round {
         float correctCategoryFloat = (float) correctCategory.size();
         float entireCategoryFloat = (float) entireCategory.size();
 
-        return (correctCategoryFloat / entireCategoryFloat) * 100;
+        float result = (float) (correctCategoryFloat / entireCategoryFloat) * 100;
+        int resultInt = Math.round(result);
+       
+        return resultInt;
     }   
 }
