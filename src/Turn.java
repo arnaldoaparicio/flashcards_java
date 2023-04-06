@@ -17,7 +17,7 @@ public class Turn {
     }
 
     public boolean isCorrectGuess() {
-        if (guess.equals(card.getAnswer())) {
+        if (guess.toLowerCase().equals(card.getAnswer().toLowerCase())) {
             return true;
         } else {
             return false;
