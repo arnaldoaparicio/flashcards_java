@@ -18,7 +18,7 @@ public class Round {
         ArrayList<String> formattedTurnsTaken = new ArrayList<String>();
 
         turnsTaken.forEach(turn -> {
-            formattedTurnsTaken.add(String.format("%s %s question= %s, answer= %s, category= %s", 
+            formattedTurnsTaken.add(String.format("%s card=%s question=%s, answer=%s, category=%s", 
             turn.toString(), turn.getCard(), turn.getCard().getQuestion(), turn.getCard().getAnswer(), turn.getCard().getCategory()));
         });
         return formattedTurnsTaken.toString();
@@ -90,5 +90,9 @@ public class Round {
         int resultInt = Math.round(result);
        
         return resultInt;
-    }   
+    }
+
+    public ArrayList<Turn> getTurns() {
+        return turnsTaken;
+    }
 }
