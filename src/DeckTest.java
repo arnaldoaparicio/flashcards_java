@@ -1,5 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,16 +15,24 @@ public class DeckTest {
 
         private final Deck deck = new Deck(cards);
 
-        @Test
-        void checkFirstCardInDeck() {
+        @BeforeEach
+        void addCards() {
           cards.add(card_1);
           cards.add(card_2);
           cards.add(card_3);
-          
+        }
+
+        @Test
+        void checkFirstCardInDeck() {
           assertAll("deck",
           () -> assertEquals("What is the first name of the main character in Silent Hill 3?", deck.firstCard().getQuestion()),
           () -> assertEquals("heather", deck.firstCard().getAnswer()),
           () -> assertEquals("Video Games", deck.firstCard().getCategory())
           );
+        }
+        
+        @Test
+        void deckCount() {
+          assertEquals(3, deck.allCards().size());
         }
 }
