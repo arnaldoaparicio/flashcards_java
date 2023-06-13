@@ -30,9 +30,15 @@ public class DeckTest {
           () -> assertEquals("Video Games", deck.firstCard().getCategory())
           );
         }
-        
+
         @Test
         void deckCount() {
           assertEquals(3, deck.allCards().size());
+        }
+
+        @Test
+        void categoryCardsInVideoGames() {
+          assertEquals("[" + card_1.toString() + " question= What is the first name of the main character in Silent Hill 3?, answer= heather, category= Video Games]",
+           deck.cardsInCategory("Video Games"));
         }
 }
