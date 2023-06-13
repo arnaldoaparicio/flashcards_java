@@ -18,8 +18,8 @@ public class Round {
         ArrayList<String> formattedTurnsTaken = new ArrayList<String>();
 
         turnsTaken.forEach(turn -> {
-            formattedTurnsTaken.add(String.format("%s card=%s question=%s, answer=%s, category=%s", 
-            turn.toString(), turn.getCard(), turn.getCard().getQuestion(), turn.getCard().getAnswer(), turn.getCard().getCategory()));
+            formattedTurnsTaken.add(String.format("%s guess=%s, card=%s question=%s, answer=%s, category=%s", 
+            turn.toString(), turn.getGuess(), turn.getCard(), turn.getCard().getQuestion(), turn.getCard().getAnswer(), turn.getCard().getCategory()));
         });
         return formattedTurnsTaken.toString();
     }
