@@ -42,6 +42,8 @@ public class RoundTest {
 
   @Test
   void currentCard() {
-    
+    assertEquals(card_1.toString() + " question= " + card_1.getQuestion()
+    + ", answer= " + card_1.getAnswer() + ", category= " + card_1.getCategory(),
+     round.currentCard());
   }
 }
