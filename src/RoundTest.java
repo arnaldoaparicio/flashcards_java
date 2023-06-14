@@ -20,11 +20,28 @@ public class RoundTest {
   private final Deck deck = new Deck(cards);
 
   private final Round round = new Round(deck);
-  
+
   @BeforeEach
   void addCards() {
     cards.add(card_1);
     cards.add(card_2);
     cards.add(card_3);
+  }
+
+  @Test
+  void emptyTurnsArray() {
+    // Round has not started yet
+    assertEquals(0, round.getTurns().size());
+  }
+
+  @Test
+  void oneTurnArrayElement() {
+    round.takeTurn("heather");
+    assertEquals(1, round.getTurns().size());
+  }
+
+  @Test
+  void currentCard() {
+    
   }
 }
