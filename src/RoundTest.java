@@ -68,4 +68,13 @@ public class RoundTest {
 
     assertEquals("Incorrect!", round.latestCardFeedback());
   }
+
+  @Test
+  void checkNumberCorrect() {
+    round.takeTurn("heather");
+    round.takeTurn("Smith");
+    round.takeTurn("panda");
+
+    assertEquals(2, round.numberCorrect());
+  }
 }
