@@ -77,4 +77,15 @@ public class RoundTest {
 
     assertEquals(2, round.numberCorrect());
   }
+
+  @Test
+  void checkNumberCorrectByCategory() {
+    round.takeTurn("harry");
+    round.takeTurn("nobody knows");
+    round.takeTurn("panda");
+
+    assertEquals(0, round.numberCorrectByCategory("Video Games"));
+    assertEquals(2, round.numberCorrectByCategory("Turing Staff"));
+    assertEquals(0, round.numberCorrectByCategory("Music"));
+  }
 }
