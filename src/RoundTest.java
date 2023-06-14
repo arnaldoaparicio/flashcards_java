@@ -41,9 +41,18 @@ public class RoundTest {
   }
 
   @Test
-  void currentCard() {
+  void currentCard1() {
     assertEquals(card_1.toString() + " question= " + card_1.getQuestion()
     + ", answer= " + card_1.getAnswer() + ", category= " + card_1.getCategory(),
+     round.currentCard());
+  }
+
+  @Test
+  void currentCard2() {
+    // Check to see that current card is on 'card_2'
+    round.takeTurn("heather");
+    assertEquals(card_2.toString() + " question= " + card_2.getQuestion()
+    + ", answer= " + card_2.getAnswer() + ", category= " + card_2.getCategory(),
      round.currentCard());
   }
 }
