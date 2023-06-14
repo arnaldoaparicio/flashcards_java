@@ -55,9 +55,10 @@ public class Round {
     }
 
     public Float percentCorrect() {
-        int percent = numberCorrect() / turnsTaken.size();
-        float percentFloat = (float) percent;
-        return percentFloat * 100;
+        float correct = (float) numberCorrect();
+        float totalTurns = (float) turnsTaken.size();
+
+        return (correct / totalTurns) * 100;
     }
 
     public Integer numberCorrectByCategory(String category) {
