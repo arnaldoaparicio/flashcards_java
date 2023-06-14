@@ -26,4 +26,13 @@ public class TurnTest {
     );
   }
 
+  @Test
+  void checkForCorrectGuess() {
+    assertEquals(true, turn.isCorrectGuess());
+    assertEquals("Correct!", turn.guessFeedback());
+  }
+
+  @Test
+  
+
 }
