@@ -37,6 +37,7 @@ public class RoundTest {
   @Test
   void oneTurnArrayElement() {
     round.takeTurn("heather");
+
     assertEquals(1, round.getTurns().size());
   }
 
@@ -51,8 +52,20 @@ public class RoundTest {
   void currentCard2() {
     // Check to see that current card is on 'card_2'
     round.takeTurn("heather");
+
     assertEquals(card_2.toString() + " question= " + card_2.getQuestion()
     + ", answer= " + card_2.getAnswer() + ", category= " + card_2.getCategory(),
      round.currentCard());
+  }
+
+  @Test
+  void checkLatestCardFeedback() {
+    round.takeTurn("heather");
+
+    assertEquals("Correct!", round.latestCardFeedback());
+
+    round.takeTurn("Smith");
+
+    assertEquals("Incorrect!", round.latestCardFeedback());
   }
 }
