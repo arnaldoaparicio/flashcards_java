@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 import java.util.ArrayList;
@@ -33,6 +34,11 @@ public class TurnTest {
   }
 
   @Test
-  
+  void checkForIncorrectGuess() {
+    Turn turn_2 = new Turn("James", card_2);
+    assertNotEquals(turn_2.getGuess(), card_2.getAnswer());
+    assertEquals(false, turn_2.isCorrectGuess());
+    assertEquals("Incorrect!", turn_2.guessFeedback());
+  }
 
 }
