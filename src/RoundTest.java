@@ -44,8 +44,8 @@ public class RoundTest {
   @Test
   void currentCard1() {
     assertEquals(card_1.toString() + " question= " + card_1.getQuestion()
-    + ", answer= " + card_1.getAnswer() + ", category= " + card_1.getCategory(),
-     round.currentCard());
+        + ", answer= " + card_1.getAnswer() + ", category= " + card_1.getCategory(),
+        round.currentCard());
   }
 
   @Test
@@ -54,8 +54,8 @@ public class RoundTest {
     round.takeTurn("heather");
 
     assertEquals(card_2.toString() + " question= " + card_2.getQuestion()
-    + ", answer= " + card_2.getAnswer() + ", category= " + card_2.getCategory(),
-     round.currentCard());
+        + ", answer= " + card_2.getAnswer() + ", category= " + card_2.getCategory(),
+        round.currentCard());
   }
 
   @Test
@@ -87,5 +87,14 @@ public class RoundTest {
     assertEquals(0, round.numberCorrectByCategory("Video Games"));
     assertEquals(2, round.numberCorrectByCategory("Turing Staff"));
     assertEquals(0, round.numberCorrectByCategory("Music"));
+  }
+
+  @Test
+  void checkPercentCorrect() {
+    round.takeTurn("harry");
+    round.takeTurn("nobody knows");
+    round.takeTurn("panda");
+
+    assertEquals(Double.valueOf(66), round.percentCorrect(), 0.6667);
   }
 }
